@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+</head>
+<body>
+
+    <header>
+     <h1>Login form</h1>
+
+     <div class="form">
+
+     <label class="username" for="username">Username:-</label>
+     <input id="username" type="email" value="" name="username" placeholder="username@gmail.com">
+      <br><br>
+     <label class="password" for="pwd">Password:-</label>
+     <input id="pwd" type="password" name="pwd" placeholder="password">
+     <br><br>
+     <label id="show" onclick="shows()"><input type="checkbox" id="show"> Show Password</label>
+     <br>
+     
+        <button id="loginbtn" onclick="btn();">LOGIN</button>
+      
+     <br>
+     <a href="#" onclick="alert('Welcome to forgot password');"> Forgot Password</a>
+     <br>
+     <a href="#" onclick="alert('Welcome to new registration');">
+       New User ? Register Here
+     </a>
+
+    </div>
+    </header>
+
+    <script>
+        function btn() {
+
+            var username = document.getElementById("username").value;
+
+            var pwd = document.getElementById("pwd").value;
+
+            window.alert("Welcome to login Successfully\n\Username: " + username + "\nPassword: " + pwd);
+        }
+
+        function shows(){
+            var a = document.getElementById("pwd");
+
+            a.type = "text";
+        }
+
+
+
+    </script>
+</body>
+</html>
